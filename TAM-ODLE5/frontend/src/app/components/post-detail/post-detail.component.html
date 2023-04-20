@@ -1,0 +1,43 @@
+<style>
+        
+    .outside_container{
+        display: flex;
+        width: 100%;
+    }
+    .container{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+
+    .post{
+        padding: 2%;
+        margin: 2%;
+        background-color: rgba(241, 241, 241, 0.877);
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .post:hover{
+        background-color: rgb(255, 255, 255);
+        transition: background-color 0.3s ease;
+    }
+    .post_link:hover{
+        color: blue;
+        transition: color 0.3s ease;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<div class="outside_container">
+    <div class="container">
+        <div class="post">
+            <h3><a href="/posts/{{ post?.id}}"> {{ post?.title }}</a></h3>
+            <p>by {{ post?.firstName }} {{ post?.lastName }}; on {{ post?.dateCreated }}</p>
+            <p>{{ post?.body }}</p>
+        </div>
+    </div>
+</div>
+
